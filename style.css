@@ -9,6 +9,8 @@
 
 body {
     background: #F1F6F9;
+    height: 100%;
+    width: 100%;
 }
 
 .about img {
@@ -27,11 +29,10 @@ body {
 .socials img {
     height: 35px;
     width: 35x;
-    color: white;
 }
 
 .main {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .about {
@@ -53,10 +55,13 @@ body {
 
 .socials {
     margin-top: 10px;
+    height: auto;
+    width: 260px;
     display: flex;
-    justify-content: center;
-    justify-items: auto;
+    justify-content: space-around;
     align-items: center;
+    #border: 5px cyan solid;
+    
 }
 
 h1{
@@ -74,17 +79,6 @@ h1{
     width: 35px;
 }
 
-.button-rectangle{
-    height: 80px;
-    width: 720px;
-    border: 10px red solid;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    padding: 10px;
-}
-
 .button-rectangle img{
     margin-right: 0px;
 }
@@ -96,10 +90,13 @@ h1{
 }
 
 .links{
+    #border: 10px blue solid;
+    height: 400px;
+    width: 720px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
 h2{
@@ -122,55 +119,42 @@ h2{
     box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   }
-  
-  .button::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(135deg,#394867,#9BA4B5 );
-    transform: translate(0%,90%);
-    z-index: 99;
-    position: relative;
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .button::after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    transform-origin: top;
-    transform: translate(0%,-100%);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .button:hover::before {
-    transform: translate(0%,0%);
-  }
-  
-  .button:hover::after {
-    transform: translate(0%,-200%);
-  }
-  
-  .button:focus {
-    outline: none;
-  }
-  
-  .button:active {
-    scale: 0.95;
-  } 
 
-#b1 ::after{
-    content: "WhatsChat";
+.btn {
+    #border: 10px red solid;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
 }
 
-#b1 ::before{
-    content: "WhatsApp Chat Analyser";
+.links button{
+    font-size: 20px;
+    font-weight: 500;
+    height: 50px;
+    max-height: 50px;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50px;
+    border: 2px #212A3E solid;
+    background-image: linear-gradient(to right, #6a5ef0 0%,  #35d1fc 0%);
+  background-size: 0% 100%;
 }
+.links button:hover{
+    animation: fillBackground 0s forwards;
+
+}
+@keyframes fillBackground {
+    from {
+      background-size: 0% 100%;
+    }
+    to {
+      background-size: 100% 100%;
+    }
+  }
+
+box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+ transition: 12s ease-in;
+
