@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #F1F6F9;
+    background: linear-gradient(to right, rgb(216, 234, 238) 0%, #F1F6F9 100%);
     height: 100%;
     width: 100%;
 }
@@ -17,7 +17,7 @@ body {
     height: 130px;
     width: 130px;
     border-radius: 130px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.336);
 }
 
 .about img:hover {
@@ -29,10 +29,12 @@ body {
 .socials img {
     height: 35px;
     width: 35x;
+    
 }
 
+
 .main {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +46,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-height: 270px;
 }
 
 .about {
@@ -59,19 +62,21 @@ body {
     width: 260px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    #border: 5px cyan solid;
-    
+    align-items: center;    
 }
 
 h1{
     color: #212A3E;
-    font-size: 40px;
+    font-size: 43px;
+    cursor:grab
+}
+h1:hover{
+    color: #1B9C85;
 }
 
 .about p{
     color : #394867;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .button-container img{
@@ -79,82 +84,80 @@ h1{
     width: 35px;
 }
 
-.button-rectangle img{
-    margin-right: 0px;
-}
-
-.button-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .links{
-    #border: 10px blue solid;
-    height: 400px;
+    margin-top: 18px;
+    height: 350px;
     width: 720px;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 h2{
     text-align: center;
+    font-size: 35px;
+    font-weight: 350;
+    color: #1B9C85;
+    margin-top: 13px;
+    font-family: 'Montserrat';
+}
+
+h2:hover{
+    font-weight: 400;;
 }
 
 
-.button {
-    position: relative;
-    background-color: transparent;
-    color: #F1F6F9;
-    font-size: 17px;
-    font-weight: 600;
-    border-radius: 10px;
-    width: 830px;
-    height: 60px;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-
 .btn {
-    #border: 10px red solid;
     display: flex;
     justify-content: center;
     text-decoration: none;
 
 }
 
-.links button{
+.links button {
     font-size: 20px;
     font-weight: 500;
     height: 50px;
     max-height: 50px;
     width: 100%;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     border-radius: 50px;
-    border: 2px #212A3E solid;
-    background-image: linear-gradient(to right, #6a5ef0 0%,  #35d1fc 0%);
-  background-size: 0% 100%;
-}
-.links button:hover{
-    animation: fillBackground 0s forwards;
-
-}
-@keyframes fillBackground {
-    from {
-      background-size: 0% 100%;
-    }
-    to {
-      background-size: 100% 100%;
-    }
+    border: 2px solid #212a3e;
+    background-color: rgb(255, 255, 255);
+    color: #212a3e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
+  
+  .links button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #394867;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+  }
+  
+  .links button:hover {
+    font-size: 23px;
+    justify-content: center;
+    color: #f1f6f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    background-color: #212a3e;
 
-box-shadow: 6px 6px 12px #c5c5c5,
-    -6px -6px 12px #ffffff;
-    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
- transition: 12s ease-in;
+  }
+  
+  .links button:hover::before {
+    transform: translateY(0);
+  }  
+
 
