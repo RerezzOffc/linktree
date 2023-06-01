@@ -22,10 +22,7 @@ There are two ways to access and use the Linktree:
 + **Customization**: To create your own _Linktree_: fork the repository, clone it to your local machine, open index.html, customize the HTML, save the file, commit and push changes to your GitHub repository, and access your customized Linktree via the GitHub Pages link.
 
 ## Screenshot
+![Screenshot (345)](https://github.com/shrudex/linktree/assets/91502997/1a305b3e-d85a-415d-9139-2ff8a0dd5c96)
 
 ## Contact
-
 If you have any questions, suggestions, or just want to say hi, feel free to reach out to me.
-
-## 
-#### I appreciate your interest in exploring my Linktree repository. Thank you!
