@@ -18,7 +18,7 @@ socialIcons.forEach(icon => {
 const profile = document.querySelector('.pfp');
 const s = profile.src;
 profile.addEventListener('mouseover', function() {
-        profile.src = "/assets/pfp.gif";
+        profile.src = "assets/pfp.gif";
         console.log('pressed');
 });
 profile.addEventListener('mouseout', function() {
